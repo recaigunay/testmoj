@@ -1,14 +1,15 @@
+
 *find anagrams by using this paths
 
-/crepitus
+https://recai-testmoj.herokuapp.com/crepitus
 
+https://recai-testmoj.herokuapp.com/crepitus,paste,sinks
 
-/crepitus,paste,sinks
-
-
-/crepitus,paste,sinks,boaster,knits,kinship,enlist,sort
+https://recai-testmoj.herokuapp.com/crepitus,paste,sinks,boaster,knits,kinship,enlist,sort,sort,sort
 
 ------------------------------------------------------------------
+
+*This app is hosted on https://recai-testmoj.herokuapp.com
 
 *used node js, express js
 
