@@ -75,7 +75,7 @@ const findAnagrams = (requestedWords, content) => {
         let index = resultData.findIndex(item => item.requestedWord == element)
         if (index < 0) {
             contentArray.forEach(contentElement => {
-                if (element != contentElement) {
+                if (element != contentElement && element.length == contentElement.length) {
                     let str2 = regularize(contentElement);
                     if (regularize(str1) == regularize(str2)) {
                         item.anagrams += (item.anagrams == "" ? contentElement : ', ' + contentElement)
