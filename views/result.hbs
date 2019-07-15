@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>RESULTS</h2>
+    <hr>
+
+    {{#if result}}
+
+    <table>
+
+        <tr>
+            <td>
+                <b>Searched Word</b>
+            </td>
+            <td>
+                <b>Anagram Content</b>
+            </td>
+        </tr>
+
+        {{#each result}}
+        <tr>
+            <td>
+                {{requestedWord}}
+            </td>
+            <td>
+                {{anagrams}}
+            </td>
+        </tr>
+        {{/each}}
+
+    </table>
+
+    {{else}}
+    <h1>{{status}} - {{errorMessage}}</h1>
+    {{/if}}
+
+
+
+</body>
+
+</html>
