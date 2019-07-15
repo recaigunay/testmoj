@@ -1,9 +1,11 @@
 *find anagrams by using this paths
 
 /crepitus
-or
+
+
 /crepitus,paste,sinks
-or
+
+
 /crepitus,paste,sinks,boaster,knits,kinship,enlist,sort
 
 ------------------------------------------------------------------
