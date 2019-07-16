@@ -66,7 +66,6 @@ const findAnagrams = (requestedWords, content) => {
     let contentArray = content.toString().split('\n')
 
     wordsArray.forEach(element => {
-        let str1 = regularize(element);
         let item = {
             requestedWord: element,
             anagrams: ""
@@ -75,9 +74,8 @@ const findAnagrams = (requestedWords, content) => {
         let index = resultData.findIndex(item => item.requestedWord == element)
         if (index < 0) {
             contentArray.forEach(contentElement => {
-                if (element != contentElement && element.length == contentElement.length) {
-                    let str2 = regularize(contentElement);
-                    if (regularize(str1) == regularize(str2)) {
+                if (element != contentElement && element.length == contentElement.length) {                    
+                    if (regularize(element) == regularize(contentElement)) {
                         item.anagrams += (item.anagrams == "" ? contentElement : ', ' + contentElement)
                     }
                 }
@@ -92,7 +90,7 @@ const findAnagrams = (requestedWords, content) => {
 }
 
 const regularize = (str) => {
-    return str.toLowerCase().split('').sort().join('').trim();
+    return str.split('').sort().join('').trim();
 }
 
 module.exports = router;
